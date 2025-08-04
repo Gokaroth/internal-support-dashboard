@@ -61,8 +61,8 @@ npm --version   # Should be 8.0+
 
 ```bash
 # Clone or download the project
-mkdir bunq-support-dashboard
-cd bunq-support-dashboard
+mkdir ;-support-dashboard
+cd ;-support-dashboard
 
 # Create directory structure
 mkdir backend frontend
@@ -81,7 +81,7 @@ frontend/
 
 **Frontend Features:**
 - ✅ Responsive design with light/dark mode support
-- ✅ Professional design system with bunq branding
+- ✅ Professional design system with ; branding
 - ✅ Real-time ticket filtering and search
 - ✅ Modal-based ticket details view
 - ✅ Auto-assignment logic for teams and priorities
@@ -151,7 +151,7 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=your_secure_password
-DB_NAME=bunq_tickets
+DB_NAME=;_tickets
 
 # For development with SQLite (easier setup)
 # DB_CLIENT=sqlite3
@@ -194,10 +194,10 @@ sudo systemctl start postgresql
 psql -U postgres
 
 # Create database and user
-CREATE DATABASE bunq_tickets;
-CREATE USER bunq_user WITH PASSWORD 'your_secure_password';
-GRANT ALL PRIVILEGES ON DATABASE bunq_tickets TO bunq_user;
-ALTER USER bunq_user CREATEDB;  -- For migrations
+CREATE DATABASE ;_tickets;
+CREATE USER ;_user WITH PASSWORD 'your_secure_password';
+GRANT ALL PRIVILEGES ON DATABASE ;_tickets TO ;_user;
+ALTER USER ;_user CREATEDB;  -- For migrations
 \q
 ```
 
@@ -206,9 +206,9 @@ ALTER USER bunq_user CREATEDB;  -- For migrations
 DB_CLIENT=pg
 DB_HOST=localhost
 DB_PORT=5432
-DB_USER=bunq_user
+DB_USER=;_user
 DB_PASSWORD=your_secure_password
-DB_NAME=bunq_tickets
+DB_NAME=;_tickets
 ```
 
 #### Option B: SQLite (Quick Development Setup)
@@ -382,14 +382,14 @@ CREATE INDEX idx_tickets_submitter_email ON tickets(submitterEmail);
 The frontend uses a comprehensive design system based on CSS custom properties:
 
 **Color Palette:**
-- **Primary**: Teal (#21808D) - bunq brand color
+- **Primary**: Teal (#21808D) - ; brand color
 - **Success**: Teal variants for positive actions
 - **Warning**: Orange (#A84B2F) for medium priority
 - **Error**: Red (#C0152F) for critical issues
 - **Surface**: Cream (#FFFFFE) and Charcoal (#1F2121) for backgrounds
 
 **Typography:**
-- **Primary Font**: FKGroteskNeue (bunq brand font)
+- **Primary Font**: FKGroteskNeue (; brand font)
 - **Fallbacks**: Geist, Inter, system fonts
 - **Responsive Scaling**: 11px to 30px range
 
@@ -413,7 +413,7 @@ DB_HOST=your-production-db-host
 DB_PORT=5432
 DB_USER=your-db-user
 DB_PASSWORD=your-secure-password
-DB_NAME=bunq_tickets
+DB_NAME=;_tickets
 
 # Security
 JWT_SECRET=your-256-bit-secure-jwt-secret
@@ -437,8 +437,8 @@ The project includes Docker support:
 ```bash
 # Build and run with Docker
 cd backend
-docker build -t bunq-support-dashboard .
-docker run -p 4000:4000 --env-file .env bunq-support-dashboard
+docker build -t ;-support-dashboard .
+docker run -p 4000:4000 --env-file .env ;-support-dashboard
 
 # Or use Docker Compose (includes PostgreSQL)
 docker-compose up -d
@@ -492,10 +492,10 @@ curl http://localhost:4000/api/health
 curl http://localhost:4000/api/tickets/stats
 
 # Database backup (PostgreSQL)
-pg_dump -U bunq_user -h localhost bunq_tickets > backup_$(date +%Y%m%d).sql
+pg_dump -U ;_user -h localhost ;_tickets > backup_$(date +%Y%m%d).sql
 
 # Database restore
-psql -U bunq_user -h localhost bunq_tickets < backup_20250115.sql
+psql -U ;_user -h localhost ;_tickets < backup_20250115.sql
 ```
 
 ## 🧪 Testing and Development
@@ -646,11 +646,11 @@ echo $SLACK_ENABLED
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🏢 About bunq
+## 🏢 About ;
 
-Built with ❤️ for bunq's Process Engineering team. This dashboard represents our commitment to internal tooling excellence and developer experience.
+Built with ❤️ for ;'s Process Engineering team. This dashboard represents our commitment to internal tooling excellence and developer experience.
 
-**bunq** - The Bank of The Free 🌈
+**;** - The Bank of The Free 🌈
 
 ---
 
