@@ -1,4 +1,4 @@
-# bunq Support Dashboard - Complete Full-Stack Application
+# Support Dashboard - Complete Full-Stack Application
 
 A production-ready internal support ticket dashboard built with industry-standard security, performance, and maintainability. This repository contains both the **frontend** (HTML/CSS/JavaScript) and **enterprise-grade Node.js backend** with full database persistence and Slack integration.
 
