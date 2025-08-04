@@ -648,9 +648,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🏢 About ;
 
-Built with ❤️ for ;'s Process Engineering team. This dashboard represents our commitment to internal tooling excellence and developer experience.
-
-**;** - The Bank of The Free 🌈
+Built with ❤️ for Process Engineering
 
 ---
 
