@@ -1,0 +1,54 @@
+{
+  "name": "bunq-support-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Production-ready Node.js backend for internal support ticket dashboard",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "migrate": "node migrations/001_create_tickets_table.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "docker:build": "docker build -t bunq-support-dashboard .",
+    "docker:run": "docker run -p 4000:4000 bunq-support-dashboard",
+    "docker:compose": "docker-compose up -d"
+  },
+  "keywords": ["support", "ticketing", "dashboard", "internal", "bunq", "fintech"],
+  "author": "Process Engineering Team <process-engineering@bunq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "knex": "^3.0.1",
+    "sqlite3": "^5.1.6",
+    "pg": "^8.11.3",
+    "joi": "^17.11.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "compression": "^1.7.4",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "@babel/preset-env": "^7.23.6",
+    "babel-jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunq/internal-support-dashboard-backend"
+  }
+}
